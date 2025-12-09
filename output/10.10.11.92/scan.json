@@ -1,0 +1,20 @@
+{
+  "target": "10.10.11.92",
+  "open": {
+    "tcp": {
+      "22": {
+        "state": "open",
+        "name": "ssh",
+        "product": "OpenSSH",
+        "version": "8.9p1 Ubuntu 3ubuntu0.13"
+      },
+      "80": {
+        "state": "open",
+        "name": "http",
+        "product": "Apache httpd",
+        "version": "2.4.52"
+      }
+    }
+  },
+  "down_hosts": []
+}

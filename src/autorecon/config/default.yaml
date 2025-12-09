@@ -1,0 +1,20 @@
+scanner:
+  fast_ports: "top 1000"
+  full_ports: "1-65535"
+  timing: "-T4"
+
+subdomain:
+  enabled: true
+  brute: false
+  wordlist: builtin
+  tools: [subfinder, dnsx, ffuf]
+  wildcard_filter: true
+  rescan_new_ips: ask
+
+plugins:
+  http:  true
+  ftp:   true
+  smb:   true
+  ssh:   true
+  dns:   true
+  subdom: true

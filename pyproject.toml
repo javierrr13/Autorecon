@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autorecon"
+version = "0.1.0"
+description = "Recon automation for HTB/TryHackMe-style boxes"
+authors = [{name = "You", email = "you@example.com"}]
+dependencies = [
+    "typer>=0.9",
+    "rich>=13",
+    "pydantic>=2",
+    "jinja2>=3",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "black", "ruff"]
+
+[project.scripts]
+autorecon = "autorecon.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]

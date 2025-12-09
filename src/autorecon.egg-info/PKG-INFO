@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: autorecon
+Version: 0.1.0
+Summary: Recon automation for HTB/TryHackMe-style boxes
+Author-email: You <you@example.com>
+Requires-Dist: typer>=0.9
+Requires-Dist: rich>=13
+Requires-Dist: pydantic>=2
+Requires-Dist: jinja2>=3
+Requires-Dist: pyyaml>=6
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

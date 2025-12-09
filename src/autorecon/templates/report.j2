@@ -1,0 +1,24 @@
+# Recon report for {{ target }}
+
+## Executive Summary
+| Target | {{ target }} |
+|--------|--------------|
+| Open ports | {{ open | length }} |
+
+## Open Ports
+| Port | Proto | Service | Product | Version |
+|------|-------|---------|---------|---------|
+{% for proto, ports in open.items() %}
+{%- for port, info in ports.items() %}
+| {{ port }} | {{ proto }} | {{ info.name }} | {{ info.product }} | {{ info.version }} |
+{%- endfor %}
+{%- endfor %}
+
+{% if subdomains %}
+## Subdomains discovered
+| Subdomain |
+|-----------|
+{% for s in subdomains %}
+| {{ s }} |
+{%- endfor %}
+{% endif %}
